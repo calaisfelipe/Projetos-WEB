@@ -19,8 +19,8 @@ header{
 }
 
 .container-header{
-    background-color: #252323;
     width: 980px;
+    height: 60px;
     margin:auto;
     display: flex;
     justify-content: space-between;
@@ -38,3 +38,45 @@ main{
 nav{padding: 20px;
 }
 nav > a{ margin-left:15px}
+
+.container-header2{
+    width: 70%;
+    margin:auto;
+    min-height: 80px;
+    border-bottom: 3px solid #efefef;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.menu{
+    padding: 35px;
+}
+.menu > ul > li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.menu > ul > li >a {
+    color: #8b8b8b;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+#home{
+    color:#00bac6;
+}
+
+.container-pesquisa{padding:20px;}
+#ipesquisa{
+    height: 36px;
+    padding:10px;
+width:190px;
+background-image: url(images/busca.png);
+background-repeat: no-repeat;
+background-position: 92%;
+border: 1px solid #d6d6d6;
+
+}
