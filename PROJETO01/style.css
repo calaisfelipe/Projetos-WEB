@@ -208,6 +208,7 @@ article > h1{
 
 article > p {
     margin-top: 15px;
+    
 }
 
 
@@ -262,6 +263,7 @@ article > p {
     font-size: 0.8em;
     margin-left: 30px;
     margin-right: 30px;
+    line-height: 15px;
     
 }
 
@@ -291,8 +293,13 @@ article > p {
 .itemrodape > p{
     font-size:0.7em;
     color: #b1b1b1;
+    text-align: justify;
+    padding: 5px;
 }
 
+.itemrodape> h2{
+    font-weight: lighter;
+}
 #footer2{
     background-color: #252827;
     display: flex;
@@ -307,17 +314,17 @@ article > p {
     height: 40px;
 }
 
-.logorelogio{
-    display: inline-block;
-}
 
 ul>li{
     list-style-type: none;
     font-size:0.7em;
     color: #b1b1b1;
     padding: 10px;
-    
-    
+        
+}
+
+ul > li > img{
+    margin-right: 12px;
 }
 
 hr{
@@ -325,12 +332,17 @@ hr{
     margin-block-end: revert;
 }
 
-
-#rodape2 > p {
-    text-align: justify;
+#rodape1 > div> p>  small{
+    font-size: 9px;
+    color: #898989;
 }
 
 #rodape2 > p > strong{
     color: white;
     font-size: 1.4em;
+}
+
+.logorelogio{
+    display: flex;
+    gap: 10px;
 }
