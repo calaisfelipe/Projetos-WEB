@@ -278,7 +278,7 @@ article > p {
 }
 
 #container-rodape{
-    background-color: #514f4a;
+    background-image: url(images/footer1.png);
     color: white;
     display: flex;
     justify-content: center;
@@ -301,7 +301,7 @@ article > p {
     font-weight: lighter;
 }
 #footer2{
-    background-color: #252827;
+    background-image: url(images/footer2.png);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -310,7 +310,7 @@ article > p {
 }
 
 .col-60{
-    background-color: #514f4a;
+    background-image: url(images/footer1.png);
     height: 40px;
 }
 
