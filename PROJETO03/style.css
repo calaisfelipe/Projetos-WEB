@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+*{  margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-image: linear-gradient(to right,#D92A27,#F0378A,#D927D0,#C62DF8);
+}
+
+main{
+    margin-top: 100px;
+}
+
+h2{color:white;
+    text-align: center;
+    font-size: 1.8em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#container-task{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#itask{ width: 400px;
+height: 40px;
+text-indent: 30px;
+font-size: 1.3em;}
+
+button{
+    width: 40px;
+    height: 38px;
+    padding: 0%;
+    font-size: larger;
+    cursor: pointer;
+    border: 3px solid lightgray;
+}
+
+ul{list-style-type: none;}
+
+li{ margin: auto;
+    width: 400px;
+    height: 40px;
+    background-color: white;
+    border-width: 3px;
+    border-color: lightgray;
+    margin-top: 10px;
+    font-size: 1.3em;
+    text-indent: 30px;
+   
+}
+
+
+li button{
+    float:right;
+    width: 35px;
+    height: 40px;
+    border: 3px solid lightgray;
+}
+
+#btnok{
+    color: green;
+}
+
+#btndel{
+    color: red;
+}
+
+input::placeholder{
+    text-indent: 30px;
+    color:black;
+}
+
+ion-icon{
+    color: blue;
+ 
+}
