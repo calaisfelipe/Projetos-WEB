@@ -4,6 +4,8 @@ var list = document.querySelector('#lista')
 var newtask = document.querySelector('#itask')
 
 
+
+//Logica ao apertar botão de adicionar tarefa
 btntask.addEventListener('click',function(){
     let nometask = newtask.value
     
