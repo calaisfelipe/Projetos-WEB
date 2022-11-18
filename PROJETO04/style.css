@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+*{
+    padding: 5px;
+    font-family: Helvetica;
+
+}
+
+body{
+    padding: 15px;
+}
+
+.hide{
+    display:none;
+}
+
+#posts-container{
+    text-align: left;
+    margin-top: 10px;
+
+}
+
+
+a, input[type="submit"]{
+    color: white;
+    background-color: #007BFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    opacity: .7;
+    cursor: pointer;
+    border: none;
+}
+
+a:hover, input[type="submit"]:hover{
+    opacity: 1;
+}
