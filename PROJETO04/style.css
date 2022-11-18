@@ -35,3 +35,23 @@ a, input[type="submit"]{
 a:hover, input[type="submit"]:hover{
     opacity: 1;
 }
+
+form {
+    width: 300px;
+}
+
+form div{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: .5em;
+}
+
+label{
+    font-weight: bold;
+    margin-bottom: .3em;
+}
+
+
+.paragrafemail{
+    color:#007BFF;
+}

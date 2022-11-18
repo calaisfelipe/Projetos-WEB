@@ -9,7 +9,9 @@ const PostPage = document.querySelector('#post')
 const PostContainer = document.querySelector('#post-container')
 const CommentContainer = document.querySelector('#coments-container')
 
-
+const commentForm = document.querySelector('#coment-form')
+const emailInput = document.querySelector('#iemail')
+const bodyInput = document.querySelector('#body')
 
 // Get id from URL
 
@@ -67,7 +69,7 @@ async function getAllPosts(){
             PostPage.classList.remove('hide')
 
    
-            const titulo = document.createElement('h2')
+            const titulo = document.createElement('h1')
             const corpo = document.createElement('p')
 
             titulo.innerText = dataPost.title
@@ -78,15 +80,14 @@ async function getAllPosts(){
 
 
             dataComment.map((dataComment) =>{
-                const nameComment = document.createElement('h2')
+                
                 const emailComment = document.createElement('p')
                 const bodyComment = document.createElement('p')
 
-                nameComment.innerText = dataComment.name
                 emailComment.innerText = dataComment.email
+                emailComment.classList.add('paragrafemail')
                 bodyComment.innerText = dataComment.body
 
-                CommentContainer.appendChild(nameComment)
                 CommentContainer.appendChild(emailComment)
                 CommentContainer.appendChild(bodyComment)
 
@@ -100,4 +101,13 @@ if (!postId){
     getAllPosts()    
 }else{
     getPost(postId)
+
+    // Add um evento adidicionar comentario
+
+    commentForm.addEventListener('submit', (e) =>{
+        e.preventde
+    })
+
+
+
 }
