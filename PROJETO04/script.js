@@ -93,10 +93,43 @@ async function getAllPosts(){
 
             }
             )
-
-
     }
 
+    
+    //INSERINDO UM COMENTARIO NO SISTEMA / POST A COMMENT
+
+    async function postcomment(comment){
+        
+        const response = await fetch(`${url}/${postId}/comments`,{
+            method: "POST",
+            body: comment,
+            headers: {
+                "Content-type": "application/json"
+            }
+        })
+
+        const data = await response.json()
+
+        function CreateComment(comment){
+            const titulo = document.createElement('p')
+            const corpo = document.createElement('p')
+    
+            titulo.innerText = comment.email
+            titulo.classList.add('paragrafemail')
+            corpo.innerText = comment.body
+    
+            CommentContainer.appendChild(titulo)
+            CommentContainer.appendChild(corpo)
+    
+    
+            emailInput.value = ''
+            bodyInput.value = ''
+            }
+
+       CreateComment(data)
+
+    }
+            
 if (!postId){
     getAllPosts()    
 }else{
@@ -105,7 +138,20 @@ if (!postId){
     // Add um evento adidicionar comentario
 
     commentForm.addEventListener('submit', (e) =>{
-        e.preventde
+        e.preventDefault()
+
+        let comment = {
+            email: emailInput.value ,
+            body: bodyInput.value
+        }
+
+        console.log(comment)
+
+        comment = JSON.stringify(comment)
+
+        postcomment(comment)
+
+       
     })
 
 
