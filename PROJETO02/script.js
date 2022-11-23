@@ -23,9 +23,65 @@ class calculator {
         this.updateScreen()
     }
 
+    //Processando todas as operações
+    processOperation(operation){
+      
+        //pega valores atuais e anteriores
+      let operationValue
+      let previous = +this.prevop.innerText.split("")[0]
+      let current = +this.currtop.innerText
+
+        switch(operation){
+            case '+':
+              operationValue = previous + current
+              this.updateScreen(operationValue, operation,current,previous)  
+              break
+              case '-':
+                operationValue = previous - current
+                this.updateScreen(operationValue, operation,current,previous)  
+                break
+                case '*':
+                    operationValue = previous * current
+                    this.updateScreen(operationValue, operation,current,previous)  
+                    break
+                    case '/':
+                        operationValue = previous / current
+                        this.updateScreen(operationValue, operation,current,previous)  
+                        break
+            default:
+             break
+          
+        }
+
+    console.log(operationValue, operation,current,previous)
+
+    }
+
+
     //Mudas os valores na tela da calculadora
-    updateScreen(){
-        this.currtop.innerText += this.currentOperation 
+    updateScreen(
+        operationValue = null, 
+        operation = null, 
+        current = null, 
+        previous = null){
+
+
+            //checa se o valor é zero, se for adiciona no current 
+    if (operationValue === null){
+        this.currtop.innerText += this.currentOperation }
+        else {
+        if (previous ===0){
+            operationValue = current
+        }
+
+
+        //adiciona o valor atual no previo
+        this.prevop.innerText = `${operationValue} ${operation}`
+        this.currtop.innerText = ''
+
+        }
+
+
     }
 
 
@@ -43,7 +99,7 @@ buttons.forEach((btn) => {
         if(+value >=0 || value ==="."){   //diferencia quando digita um numero ou uma operação na calculadora
             calc.addDigit(value)
         } else {
-            console.log("op:"+value)
+            calc.processOperation(value)
         }
 
     })
