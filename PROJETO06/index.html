@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador Box-shadow</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="box-shadow-generator">
+        <section id="param-container">
+            
+                <div id="config-container">
+                    <h2>Configurações da Box Shadow:</h2>
+                    <div>
+                        <label for="idesloc-horizontal">Deslocamento horizontal:</label><br> 
+                            <input type="range"                 name="idesloc-horizontal"   id="idesloc-horizontal"
+                            min="-100"
+                            max="100"
+                            value="5">
+                        <input type="text" name="numdesloc-horizontal" id="numdesloc-horizontal" class="outputinfo"><p>px</p>
+                    </div>
+                    <div>
+                        <label for="idesloc-vertical"> Deslocamento Vertical:</label><br> 
+                            <input type="range"                 name="idesloc-vertical"   id="idesloc-vertical"
+                            min="-100"
+                            max="100"
+                            value="5">
+                        <input type="text" name="numdesloc-vertical" id="numdesloc-vertical"
+                        class="outputinfo"><p>px</p>
+                    </div>
+                    <div>
+                        <label for="iblur"> Intensidade do borrão(Blur):</label><br>
+                            <input type="range"                 name="iblur"   
+                            id="iblur"
+                            min="0"
+                            max="100"
+                            value="10">
+                        <input type="text" name="num-iblur" id="num-iblur"
+                        class="outputinfo"><p>px</p>
+                    </div>
+                    <div>
+                        <label for="iblur"> Intensidade do espalhamento(Spread):</label><br>
+                            <input type="range"                 name="ispread"   
+                            id="ispread"
+                            min="-100"
+                            max="100"
+                            value="3">
+                        <input type="text" name="num-spread" id="num-spread"
+                        class="outputinfo"
+                        ><p>px</p>
+                        <hr>
+                    </div>
+                    <div>
+                        <label for="icolor"> Cor da sombra:</label><input type="color" name="icolor" id="icolor">
+                        <input type="text" name="icolor" id="icolor">
+                        <hr>
+                    </div>
+                    <div>
+                        <label for="iblur"> Opacidade:</label><br>
+                            <input type="range"                 name="iopacity"   
+                            id="iopacity"
+                            min="-100"
+                            max="100"
+                            value="5">
+                        <input type="text" name="iopacity" id="iopacity"
+                        class="outputinfo">
+                        <hr>
+                    </div>
+                    <div>
+                        <label for="isombra-interna">Sombra interna?(Inset)</label><input type="checkbox" name="isombra-interna" id="isombra-interna">
+                        <hr>
+                    </div>
+                </div>
+
+
+        </section>
+        <aside id="preview-container">
+            <h2>Preview do efeito gerado:</h2>
+            <div id="box">
+
+            </div>
+        </aside>
+
+        <footer id="configs-container">
+            <h2>Copie e cole no seu arquivo de CSS:</h2>
+            <div id="config-result">
+                <p id="rule">Box-shadow <span></span></p>
+                <p id="webkit-rule">-webkit-Box-shadow <span></span></p>
+                <p id="moz-rule">moz-Box-shadow <span></span></p>
+            </div>
+            <p>Clique no quadro acima para copiar as regras</p>
+        </footer>
+
+    </main>
+
+  
+    
+</body>
+</html>
