@@ -4,10 +4,15 @@
     font-family: Helvetica;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 
 }
 
 main{
+    max-width: 1000px;
+    max-height: 70vh;
+    margin: auto;
+
     display: grid;
     grid-template-areas: 
     'section aside'
@@ -37,13 +42,15 @@ footer{grid-area: footer;
     padding: 1rem;
     width: 100%;
     height: 100%;
+    text-align: center;
+    
    
     }
 
     h2{
         text-align: center;
         padding: 1rem;
-        color: black;
+        color: #333;
     }
 
     .outputinfo{
@@ -55,22 +62,106 @@ footer{grid-area: footer;
        
     }
 
-    input{
-        accent-color: orange;
-        cursor: pointer;
-        
-    } 
 
     input[type="range"]{
-        width: 300px;
+        margin-top: 10px;
+        width: 350px;
+        appearance: none;
+        -webkit-appearance: none;
+        height: 24px;
+        background-color: #d3d3d3;
+        border-radius: 2px;
+        cursor: pointer;
+    }
 
+    input[type="range"]::-webkit-slider-thumb{
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        background-color: orange;
+    }
+
+    input[type="text"]{
+        height: 25px;
+        border-radius: 3px;  
+        pointer-events: none;
+        padding: 5px;
+        margin-left: 7px;
+    }
+
+    input[type="text"]:focus{
+        outline: none;
+    }
+
+    input[type="color"]{
+        margin-top: 1rem;
+        margin-left: 1rem;
+       
+        
+    }
+
+    input[type="checkbox"]{
+        margin-top: 1rem;
+        margin-left: 1rem;
+        accent-color: rgb(0, 0, 0);
+        width: 50px;
+        height: 30px;
+       
+        
     }
 
     #box{
-        margin-top: 1rem;
-        margin-left: 1rem;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
         width: 250px;
         height: 200px;
         background-color: orange;
         box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.749) ;
+       
+    }
+
+    #config-container{
+        width: 100%;
+        height: 100%;
+        
+    }
+
+    #config-container >div{
+        padding: 10px;
+    }
+
+    hr{
+        margin-top: 10px;
+    }
+
+    #div-cor> input[type="text"]{
+        margin-left: 218px;
+        
+        
+    }
+
+    #config-container >div > p{
+        display: inline-block;
+        margin-left: .3rem;
+
+    }
+
+    #config-result{
+        text-align: center;
+        padding: 1rem;
+        background-color: #888;
+        border: dashed orange;
+    }
+
+    #configs-container>p{
+        margin-top: 10px;
+        color:#333;
+    }
+
+    #preview-container{
+        width: 100%;
+        height: 100%;
+        text-align: center;
     }

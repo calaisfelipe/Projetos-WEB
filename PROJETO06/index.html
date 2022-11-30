@@ -42,7 +42,7 @@
                         class="outputinfo"><p>px</p>
                     </div>
                     <div>
-                        <label for="iblur"> Intensidade do espalhamento(Spread):</label><br>
+                        <label for="ispread"> Intensidade do espalhamento(Spread):</label><br>
                             <input type="range"                 name="ispread"   
                             id="ispread"
                             min="-100"
@@ -53,11 +53,12 @@
                         ><p>px</p>
                         <hr>
                     </div>
-                    <div>
-                        <label for="icolor"> Cor da sombra:</label><input type="color" name="icolor" id="icolor">
-                        <input type="text" name="icolor" id="icolor">
+                    <div id="div-cor">
+                        <label for="icolor"> Cor da sombra: </label><br><input type="color" name="icolor" id="icolor">
+                        <input type="text" name="num-icolor" id="num-icolor" size="8" value="#FFFFFF">
                         <hr>
                     </div>
+                   
                     <div>
                         <label for="iblur"> Opacidade:</label><br>
                             <input type="range"                 name="iopacity"   
@@ -65,12 +66,13 @@
                             min="-100"
                             max="100"
                             value="5">
-                        <input type="text" name="iopacity" id="iopacity"
+                        <input type="text" name="num-iopacity" id="num-iopacity"
                         class="outputinfo">
                         <hr>
                     </div>
                     <div>
-                        <label for="isombra-interna">Sombra interna?(Inset)</label><input type="checkbox" name="isombra-interna" id="isombra-interna">
+                        <label for="isombra-interna">Sombra interna?(Inset)</label>
+                        <br> <input type="checkbox" name="isombra-interna" id="isombra-interna">
                         <hr>
                     </div>
                 </div>
