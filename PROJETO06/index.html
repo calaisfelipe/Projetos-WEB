@@ -63,9 +63,10 @@
                         <label for="iblur"> Opacidade:</label><br>
                             <input type="range"                 name="iopacity"   
                             id="iopacity"
-                            min="-100"
-                            max="100"
-                            value="5">
+                            min="0"
+                            max="1"
+                            step="0.1"
+                            value="1">
                         <input type="text" name="num-iopacity" id="num-iopacity"
                         class="outputinfo">
                         <hr>
@@ -89,10 +90,12 @@
         <footer id="configs-container">
             <h2>Copie e cole no seu arquivo de CSS:</h2>
             <div id="config-result">
-                <p id="rule">box-shadow: <span ></span></p>
-                <p id="webkit-rule">-webkit-Box-shadow: <span></span></p>
-                <p id="moz-rule">moz-Box-shadow: <span></span></p>
+                <p id="rule">box-shadow: <span ></span>;</p>
+                <p id="webkit-rule">-webkit-Box-shadow: <span></span>;</p>
+                <p id="moz-rule">moz-Box-shadow: <span></span>;</p>
+                <textarea name="copie-field" id="copie-field" cols="60" rows="1"></textarea>
             </div>
+           
             <p>Clique no quadro acima para copiar as regras</p>
         </footer>
 
