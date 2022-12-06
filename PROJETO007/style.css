@@ -1,0 +1,159 @@
+@charset "UTF-8";
+:root{
+    --color00: #04BD7D;
+    --color01: #2C2F35;
+    --primary:  #fff;
+    --textcolor: #5F6776;
+    --inactive: #9a9a9a;
+    
+
+}
+
+
+#checkout-page{
+    background-color: var(--color00);
+    color: var(--primary);
+}
+
+
+#fade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+#fade .spinner-border{
+    width: 60px;
+    height: 60px;
+}
+
+
+.hide{
+    display: none !important;
+}
+
+#message{
+    width: 40%;
+}
+
+.alert.alert-light p {
+    border-bottom: 1px solid #333;
+
+    padding: 1.2em 0;
+}
+
+
+
+/* Steps*/
+
+#order-form-container{
+    padding: 1.5em;
+    max-width: 700px;
+    background-color: var(--color01);
+    border-radius: 10px;
+    z-index:-2;
+    margin-top: 20px;
+    
+
+}
+
+#steps{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color01);
+    position: relative;
+}
+
+.step{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.step i {
+    background-color: var(--inactive);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    line-height: 45px;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 0.3em;
+    
+}
+
+.step .active{
+    background-color: var(--textcolor);
+    border: 3px solid #04BD7D;
+   
+    
+}
+
+.step p {
+    color: var(--primary)
+}
+
+.line{
+    border-bottom: 1px solid var(--textcolor);
+    position: absolute;
+    width: 70%;
+    top: 22.5px;
+    left: 16%;
+    z-index: 0;
+
+ 
+
+}
+
+form,#form-header{
+    padding:.7em;
+}
+
+
+/*form*/
+
+#order-form-container button{
+    background-color: var(--textcolor);
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+#order-form-container input,
+#order-form-container select{
+    background-color: var(--textcolor);
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+#order-form-container input:disabled,
+#order-form-container select:disabled{
+    opacity: 0.5;
+   
+}
+
+#order-form-container input:focus,
+#order-form-container button:hover
+{
+    border-color: var(--color00);
+    
+}
+
+#order-form-container{
+    padding: 1rem .75rem;
+}
+
+#order-form-container label{
+    color: var(--primary);
+    left:1em;
+}
+
