@@ -7,8 +7,46 @@
     <title>Aplicando dark Mode</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+
+    <!--Boostrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
 </head>
-<body>
+<body class="teste">
+    <header>
+        <h2>Light and Dark</h2>
+        <div>
+            <input type="checkbox" name="change-theme" id="change-theme" class="hide">
+            <label for="change-theme">
+                <i id="sun" class="bi bi-sun"></i>
+                <i id="moon" class="bi bi-moon hide"></i>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <div class="card">
+            <div class="card-image">
+                <span>Nike</span>
+                <img src="image/tenis.png" alt="Tenis Nike">
+            </div>
+            <div class="card-details">
+                <h2>Tênis Nike</h2>
+                <p class="subtitle">EXCELENTE PARA CORRIDAS</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel eligendi possimus, fugit impedit maiores, quos quidem eaque accusamus sit aliquam reprehenderit eveniet rerum ipsam, magni repellendus ut fuga est velit.</p>
+                <div class="preco-container">
+                <span class="price">R$299,90</span>
+                <button class="btn">COMPRAR</button>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+
     
+
+
 </body>
 </html>
