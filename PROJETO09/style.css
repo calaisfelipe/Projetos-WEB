@@ -5,7 +5,7 @@ font-family: helvetica;
 }
 
 body{
-    background-color: #007bff;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +15,8 @@ body{
 main{
     background-color: white;
     width: 450px;
-    height: 450px;
+    min-height: 450px;
+    max-height: 650px;
     padding: 2rem;
     border: 3px solid transparent;
     border-radius: 20px;
@@ -68,11 +69,18 @@ input[type="text"], input[type="search"],select{
     padding: 1rem;
 }
 
-button, input[type="checkbox"]{
+button{
     font-size: 1.3rem;
+    padding: .5rem;
     border: none;
     cursor: pointer;
+    background-color: transparent;
 }
+
+.btnCancel, .btnCheck, .btnEdit{
+    font-size: 1.2rem;
+}
+
 
 li{
  
@@ -88,6 +96,17 @@ li{
 }
 
 
-.list-text{
-    border: 2px solid black;
+.list-text > input[type='text']{
+    border: none;
+    font-size: 1rem;
+    
+    
+}
+
+
+.checked{
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    text-decoration: line-through;
 }
