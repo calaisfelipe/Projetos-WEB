@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <main class="project-container">
+        <h1>Todo Avançado</h1>
+        <div class="inputs-container">
+            
+                <div class="tarefa-container"> 
+                    <label for="itarefa">Adicione sua tarefa</label><br>
+                    <input type="text" name="itarefa" id="itarefa" placeholder="O que você vai fazer?">
+                    <button class="adicionar"><i class="bi bi-plus-square"></i></button>
+                </div>
+            <div class="recursos-container">
+                <div class="pesquisar-container">
+                    <label for="ipesquisar">Pesquisar:</label><br>
+                    <input type="search" name="ipesquisar" id="ipesquisar" placeholder="Buscar">
+                    <button class="btnpesquisa"><i class="bi bi-search"></i></button>
+                </div>
+                <div class="filtro-container">
+                    <label for="ifiltro">Filtrar:</label><br>
+                    <select name="ifiltro" id="ifiltro">
+                        <option value="all">Todos</option>
+                        <option value="done">Feitos</option>
+                        <option value="undone">A fazer</option>
+                    </select>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="list-container">
+            <ul class="lista-tarefas">
+                <li class="hiide li-style">
+                <div class="list-text">
+                    <p>Item01 - exemplo </p>
+                </div>
+
+            
+            <div>
+                <button class="btnCheck"><i class="bi bi-check-circle"></i></button>
+
+                <button class="btnEdit">
+                    <i class="bi bi-pencil"></i>
+                </button>
+
+                <button class="btnCancel">
+                    <i class="bi bi-x-circle"></i>
+                </button>
+
+            </div>
+            
+                </li>
+            </ul> 
+
+        </div>
+
+
+    </main>
+</body>
+</html>
