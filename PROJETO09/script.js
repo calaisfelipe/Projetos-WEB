@@ -1,9 +1,18 @@
 const inputTarefa = document.querySelector('#itarefa')
 const btnAddTask = document.querySelector('.adicionar')
-const inputPesquisa = document.querySelector('.ipesquisar')
+const inputPesquisa = document.querySelector('#ipesquisar')
 const btnPesquisa = document.querySelector('.btnpesquisa')
 const inputFilter = document.querySelector('#ifiltro')
 const listUl = document.querySelector('.lista-tarefas')
+
+
+
+btnPesquisa.addEventListener('click', () =>{
+    const pesquisa = inputPesquisa.value
+    console.log(pesquisa)
+})
+
+
 
 
 btnAddTask.addEventListener('click', () =>{
@@ -83,8 +92,6 @@ btnAddTask.addEventListener('click', () =>{
 
         newLi.remove()
     })
-
-
 
    }
     

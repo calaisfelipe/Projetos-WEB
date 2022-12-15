@@ -20,7 +20,10 @@ main{
     padding: 2rem;
     border: 3px solid transparent;
     border-radius: 20px;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.139);
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
     text-align: center;
 }
 
@@ -41,8 +44,6 @@ label{
     font-weight:700;
     font-size: 1.2em;
     cursor: pointer;
-    
-    
 }
 
 input[type="text"], input[type="search"],select{
@@ -77,13 +78,12 @@ button{
     background-color: transparent;
 }
 
-.btnCancel, .btnCheck, .btnEdit{
-    font-size: 1.2rem;
+
+.bi-pencil, .bi-x-circle, .bi-check-circle{
+    padding: 4px;
 }
 
-
 li{
- 
     list-style-type: none;
     width: 400px;
     display: flex;
@@ -99,14 +99,31 @@ li{
 .list-text > input[type='text']{
     border: none;
     font-size: 1rem;
+    padding-left: 10px;
     
     
 }
 
 
 .checked{
-    background-color: green;
-    color: white;
+    background-color: #03e9f4;
     border-radius: 10px;
     text-decoration: line-through;
+    font-style: italic;
+}
+
+button:hover{
+    transform: scale(1.2);
+    transition: all .5s ease;
+ 
+    
+}
+
+h1{ animation: Titulo .5s ease-in-out infinite alternate;
+
+}
+
+@keyframes Titulo {
+    to{ transform: translateX(20px) scale(1.1) rotate(-2deg)}
+    
 }
