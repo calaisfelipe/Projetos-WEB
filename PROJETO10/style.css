@@ -1,0 +1,218 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,800;0,900;1,300;1,500&display=swap');
+
+:root{
+    --color1: #CFB9A4;
+    --color2: #A77C5A;
+    --color3: #EAEBED;
+    --color4: #0B0B0D;
+}
+
+.hide{
+    display: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+body{
+    background-image: linear-gradient(to bottom , var(--color1), var(--color2), var(--color3));
+    height: 100vh;
+}
+
+main{
+    background-color: #EAEBED;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    height: 750px;
+    min-width: 450px;
+    max-width: 800px;
+    box-shadow: 2px 2px 2px #0b0b0d21;
+
+}
+
+.form-login-container{
+    padding: 1rem; 
+    width: 50%;
+}
+
+.img-login-container{
+    width: 50%;
+    height: 100%;
+    background: url(img/pexels-karolina-grabowska-media.jpg) no-repeat center;
+    background-size: cover;
+  
+
+}
+
+form{
+    
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+form > p, #gera-senha-container > p  {
+    color: #888;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+
+h2{text-align: center;
+font-size: 1.5rem;}
+
+label{
+    margin-top: 5px;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+#result-gera-senha{
+    border: 2px solid #3681d2;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    
+}
+
+
+#result-gera-senha > p {
+    color:rgb(137, 206, 35);
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-align: center;
+
+}
+
+#btn-cadastro{
+    margin-top: 5px;
+    float: right;
+    background-color: rgb(137, 206, 35);
+    color: white;
+    padding: 1rem;
+    border-radius: 20px;
+    width: 100px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+#btn-create-password{
+    margin-top: 5px;
+    background-color: #3681d2;
+    color: white;
+    padding: 1rem;
+    border-radius: 20px;
+    width: 120px;
+    text-align: center;
+    border:  none;
+    cursor: pointer;
+}
+
+#btn-create-password:hover{
+    opacity: .8;
+    transform: scale(1.1);
+}
+
+
+#btn-cadastro:hover{
+    opacity: .8;
+    transform: scale(1.1);
+}
+
+h1{
+    font-size: 3rem;
+    padding: 1rem;
+    
+}
+
+.animate__animated.animate__fadeIn{
+    --animate-duration: 2s;
+}
+
+
+#btngera-senha{
+    border: none;
+    color: #0B0B0D;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#btngera-senha:hover{
+    color: #3681d2;
+    transform: scale(1.1);
+}
+
+input:focus{
+    outline: none;
+}
+
+input[type=text], input[type=email],input[type=password]{
+    padding: .2rem;
+    border: none;
+    border-bottom: 1px solid #0B0B0D;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: .9rem;
+    font-weight: 500;
+    height: 2.5rem;
+    text-indent: 20px;
+    
+
+}
+
+
+#config-extras-container{
+    display: flex;
+    flex-direction: column;
+    color: #3681d2;
+    
+}
+
+#senha-gerada{
+    border: none;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 800;
+
+}
+
+#numeroCaracters{
+    width:50px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.config-extras-divs{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.config-extras-divs > label{
+    font-size: 1rem;
+}
+
+#copy-button{
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    
+}
+
+#copy-button:hover{
+    transform: scale(1.2);
+}

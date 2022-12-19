@@ -1,19 +1,11 @@
-const check = document.querySelector('#icheck')
-
-console.log(check.checked)
-
-
-
-const div = document.querySelector('#copiediv')
-const result = document.querySelector('#textarea')
-const paragraf = document.querySelector('#parag')
+const btn = document.querySelector('#btn')
+const input = document.querySelector('#iresult')
 
 
 
-paragraf.addEventListener('click', (e) =>{
+
+btn.addEventListener('click', (e) =>{
     
-       const texto = 'blablabla'
-       result.innerHTML = texto
-       result.select()   
+       input.select()   
        document.execCommand('copy')
 })

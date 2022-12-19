@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Password Seguro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <script src="script2.js" defer></script>
+</head>
+<body>
+    
+<main>
+    <div class="img-login-container">
+        <h1 class="animate__animated animate__fadeIn">Seja <br>
+            bem-vindo</h1>
+        
+    </div>
+    <div class="form-login-container">
+        <form >
+            <h2>Crie sua conta:</h2>
+            <p>Utilize o nosso gerador automatico de senhas </p>
+
+            <label for="iname">Nome:</label>
+            <input type="text" name="iname" id="iname" minlength="6" max="20" placeholder="Digite seu nome" autocomplete="username">
+
+
+            <label for="iemail">E-mail:</label>
+            <input type="email" name="iemail" id="iemail" required autocomplete="email" placeholder="Digite seu e-mail">
+
+            <label for="isenha">Senha:</label>
+            <input type="password" name="isenha" id="isenha" required placeholder="Digite sua senha">
+
+            <div id="gera-senha-container">
+                <p>Quer ajuda para criar uma senha segura?  <button id="btngera-senha">Clique aqui</button></p>
+                <div id="result-gera-senha" class="hide">
+                    <p>Aqui está a sua senha:</p>
+
+                    <input type="text" name="senha-gerada" id="senha-gerada" >
+
+                    <button id="copy-button"><i class="bi bi-clipboard"></i></button>
+
+                    <div id="config-extras-container">
+
+                        <div class="config-extras-divs">
+                            <label for="numeroCaracters">
+                            Quantidade de Caracteres: </label> <input type="number" name="numeroCaracters" id="numeroCaracters" min="6" value="6" max="20"> </div>
+                        <div class="config-extras-divs">
+                            <label for="iletras">Letras:</label>
+                            <input type="checkbox" name="iletras" id="iletras"></div>
+                            <div class="config-extras-divs">
+                                <label for="inum">Numeros:</label>
+                                <input type="checkbox" name="inum" id="inum" checked></div>
+                            <div class="config-extras-divs">
+                                <label for="isimbol">Simbolos:</label>
+                                <input type="checkbox" name="isimbol" id="isimbol"></div>
+                                <div><button id="btn-create-password">Criar Senha</button></div>
+
+
+                    </div>
+                   
+                    
+                  
+                </div>
+            </div>
+
+            <label for="iconfirm">Confirme sua senha:</label>
+            <input type="password" name="iconfirm" id="iconfirm" required placeholder="Confirme a sua senha">
+
+        </form>
+        
+        <button id="btn-cadastro" type="submit">Cadastrar</button>
+            
+
+    </div>
+
+</main>
+
+
+</body>
+</html>

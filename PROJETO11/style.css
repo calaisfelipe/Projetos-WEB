@@ -1,0 +1,154 @@
+:root{
+    --font1: 'Montserrat', sans-serif;
+    --font2: 'Roboto', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font2);
+}
+
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+    background-image: url(img/pexels-min-an-1403550.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.glass-Effect{
+    background-image: linear-gradient(135deg ,  rgba(255, 255,255,0.1), rgba(255,255,255, 0));
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 32px;
+    
+
+}
+
+.container{
+    padding: 1rem;
+    width: 500px;
+    max-height: 600px;
+    text-align: center;
+}
+
+h3{
+    font-size: 1.8rem;
+}
+
+.form-input-container{
+    padding: 1rem;
+}
+
+#input-city{
+    padding: .5rem;
+    width: 250px;
+    border-radius: 10px;
+    
+}
+
+#input-city:focus{
+    outline: none;
+}
+
+/*#search{
+    width: 40px;
+    height: 40px;
+    background-color: #007bffaa;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search:hover{
+    transform: scale(.9);
+    color: white;
+    background-color: #888;
+    border: white;
+}*/
+
+#weather-data{
+    padding: 1rem;
+
+}
+
+#Temperatura{
+    font-size: 4rem;
+}
+
+.description-container, .details-container{
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    
+}
+
+.details-container{
+    gap: 20px;
+}
+
+hr{
+
+    margin-bottom: 1.5rem;
+}
+
+.hide{
+    display: none;
+    
+}
+
+#country{
+    width: 40px;
+    height: 25px;
+}
+
+
+
+.bi-arrow-clockwise{
+    font-size: 3rem;
+    
+}
+
+#loading-div{
+    animation: rotate 2s infinite;
+  
+}
+
+
+@keyframes rotate {
+    to{
+        transform: rotate(1turn);
+    }
+    
+}
+
+#city{
+    text-transform: capitalize;
+}
+
+#favorite-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 25px;
+}
+
+.btn-outline-primary{
+    font-weight: bolder;
+    color: black;
+    border: 1px solid black;
+}
