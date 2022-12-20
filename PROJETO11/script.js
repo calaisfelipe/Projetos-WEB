@@ -1,4 +1,6 @@
 const apiKey = '28e8e78ff8f6b0637cbdf6f847a986fa'
+const unsplashApiKey = 's-BH15n8TDc38VHgC73EuFNJ73zbF73QTw1RDva4DaI'
+const unsplashAutorization = 'IW-2s8RVoJKraIUmQFManVX4n4aEb8FCsNI9rcg5ZFU'
 const urlIconWeather = 'http://openweathermap.org/img/wn/'
 const urlFlagsApi = 'https://countryflagsapi.com/png/'
 
@@ -21,6 +23,12 @@ const favoriteContainer = document.querySelector('#favorite-div')
 
 const btnsFavorite = document.querySelectorAll('.favorite-btn')
 
+const fade = document.querySelector('#fade')
+const modalError = document.querySelector('#error-message-container')
+
+const btnError = document.querySelector('#btn-error')
+const body = document.querySelector('body')
+
 
 
 //funções
@@ -31,10 +39,27 @@ async function getWeather(city){
     const cityWeather = await fetch(urlCityApiTest)
     const data = await cityWeather.json()
     return data
+
 }
+    //Unsplash 
+async function getBackground(location){
+
+ const wheatherBackground = await fetch(`https://api.unsplash.com/search/photos/?query=${location}&client_id=s-BH15n8TDc38VHgC73EuFNJ73zbF73QTw1RDva4DaI`)
+
+
+ const backgroundResponse = await wheatherBackground.json()
+
+
+ return backgroundResponse
+
+}
+
+
+
 
 async function showWeather(location){
    
+    try{
     const weatherinfo = await getWeather(location)
     console.warn(weatherinfo)
     console.log(weatherinfo.sys.country)
@@ -45,6 +70,35 @@ async function showWeather(location){
     wind.innerHTML = weatherinfo.wind.speed
     umidade.innerHTML = weatherinfo.main.humidity
     weatherIcon.src = `http://openweathermap.org/img/wn/${weatherinfo.weather[0].icon}.png`
+
+
+        const newBackground = await getBackground(`${location} clima`)
+        console.log(newBackground)
+        console.log(newBackground.results[0].urls.full)
+        const sorteado = Math.floor(Math.random() * (10))
+        body.style.backgroundImage= `url(${newBackground.results[sorteado].urls.full})`
+
+
+    }
+
+    catch{
+        divWeaterData.classList.toggle('hide')
+        errorMessage()
+
+        body.style.backgroundImage = 'url(img/pexels-min-an-1403550.jpg)'
+
+        inputSearch.value = ''
+        inputSearch.focus()
+        
+        return
+    }
+}
+
+
+
+function errorMessage(){
+    fade.classList.toggle('hide')
+    modalError.classList.toggle('hide')
 }
 
 
@@ -78,7 +132,6 @@ function logicaPrograma(location){
 
 }
 
-
 //eventos
 
 btnSearch.addEventListener('click', (e) =>{
@@ -99,4 +152,8 @@ btnsFavorite.forEach((btn) =>{
     btn.addEventListener('click', (e) =>{
         logicaPrograma(btn.innerHTML)
     })
+})
+
+btnError.addEventListener('click', (e) =>{
+    errorMessage()
 })
