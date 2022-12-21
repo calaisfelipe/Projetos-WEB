@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Gerais*/
+
+body{
+    font-family: 'Roboto',sans-serif;
+}
+
+.row{
+    margin: 0;
+}
+
+.container{
+    padding: 70px 0;
+}
+
+p,li{
+    color: #444;
+    font-size: 14px;
+}
+
+
+/*Barra de Navegação*/
+
+header, .navbar{
+    background-color: #353D41;
+}
+
+#nav-container{
+    padding-top: 0 ;
+    padding-bottom: 0;
+}
+
+#logo{
+    margin-left: 15px;
+    width: 75px;
+}
+
+.navbar-brand{
+    padding: 0;
+    color: #FFF;
+}
+
+.navbar-brand:hover{
+    color: #FFF;
+}
+
+.navbar-nav > a{
+    color: #FFF;
+}
+
+.nav-expand-lg, .navbar-nav, .nav-link{
+    padding: 1rem .8rem;
+}
