@@ -172,3 +172,35 @@ left:42.5%;
     transition: ease .5s;
     
 }
+
+
+/*Progress bar*/
+
+#progress-bar-container{
+   background: url(images/cidadeparallax.png) center center no-repeat fixed;
+   background-size: cover;
+    z-index:0;
+ 
+}
+
+.circle-box{
+    padding: 0 40px;
+}
+
+#progress-bar-row > div{
+    text-align: center;
+}
+
+#progress-bar-row > div > h4{
+    
+    color: #FFF;
+    font-size: 1.5rem;
+    z-index:10;
+    margin-top: 20px;
+
+}
+
+.progressbar-text{
+    font-weight: bold;
+    font-size: 32px;
+}
