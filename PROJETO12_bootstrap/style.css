@@ -204,3 +204,15 @@ left:42.5%;
     font-weight: bold;
     font-size: 32px;
 }
+
+
+/* EQUIPE*/
+
+.card-body{
+    text-align: center;
+}
+
+.card{
+    margin-bottom: 10px;
+    color: #444;
+}
