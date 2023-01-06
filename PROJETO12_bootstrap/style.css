@@ -147,6 +147,11 @@ left:42.5%;
     font-size: 17px;
 }
 
+#container-agencia-img{
+    margin: auto;
+    
+}
+
 /*Especialidades*/
 
 .especialidade-titulo{
@@ -290,6 +295,7 @@ border: none;
     border-radius: 20px 0 0 20px;
 }
 
+
 #btn-inscrever{
     border-radius: 0 20px 20px 0;
     color: white;
@@ -357,3 +363,79 @@ border: none;
 #form-btn:hover{
     color: black;
 }
+
+
+/*responsive*/
+
+@media(max-width: 786px) {
+
+    /*Geral*/
+
+    .container{
+        padding: 20px 0;
+    }
+    
+    /*slider*/
+    #mainSlider .carousel-inner , #mainSlider .carousel-item {
+        height: auto;
+    }
+
+    #mainSlider .carousel-caption h2{
+        font-size: 2rem;
+        margin-bottom: 20px;
+        
+    }
+
+    #mainSlider .carousel-caption p ,
+    #mainSlider .carousel-caption a{
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .main-btn{
+        width: 120px;
+        height: 30px;
+        padding: 10px 20px;
+   
+    }
+
+    .carousel-caption{
+        right:10%;
+        left:10%;
+
+    }
+
+    /*Agencia*/
+
+    #about-title{
+        margin-top: 50px;
+    }
+
+    /*Progress bar*/
+
+    #progress-bar-row > div{
+        padding: 0 10px;
+    }
+
+    #progress-bar-row > div > h4{
+        font-size: 16px;
+    }
+
+
+    /*Call to action*/
+
+    #call-to-action{
+        padding:50px 20px;
+    }
+
+
+    /*News*/
+
+    #paragraf-list >  p{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+                                                                                                                                                                                                                     
