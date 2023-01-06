@@ -105,3 +105,78 @@ $(window).scroll(function(e) {
 
 
 })
+
+
+// Galeria - Filtro
+
+const divsGaleria = document.querySelectorAll('.all')
+
+const btnAll = document.querySelector('#btn-todos')
+const btnDevelopment = document.querySelector('#btn-development')
+const btnDesign = document.querySelector('#btn-design')
+const btnSEO = document.querySelector('#btn-SEO')
+
+
+
+btnAll.addEventListener('click', ()=>{
+    
+    btnAll.classList.toggle('status-project-btn')
+   
+    divsGaleria.forEach((el) =>{
+        if(el.style.display == 'none'){
+            el.style.display = 'block'
+        }
+    })
+
+})
+
+btnSEO.addEventListener('click', ()=>{
+    
+    btnSEO.classList.toggle('status-project-btn')
+
+  divsGaleria.forEach((el) =>{
+    el.style.display = 'block'
+
+    if(el.classList.contains('SEO')){
+        return
+    } else{
+        el.style.display = 'none'
+    }
+
+  })
+})
+
+btnDevelopment.addEventListener('click', ()=>{
+
+    btnDevelopment.classList.toggle('status-project-btn')
+
+    divsGaleria.forEach((el) =>{
+        el.style.display = 'block'
+      if(el.classList.contains('development')){
+          return
+      } else{
+          el.style.display = 'none'
+      }
+    })
+  })
+  
+  btnDesign.addEventListener('click', ()=>{
+
+    btnDesign.classList.toggle('status-project-btn')
+
+    divsGaleria.forEach((el) =>{
+        el.style.display = 'block'
+      if(el.classList.contains('design')){
+          return
+      } else{
+          el.style.display = 'none'
+      }
+    })
+  })
+  
+
+
+
+
+
+console.log(divsGaleria)
