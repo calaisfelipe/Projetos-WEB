@@ -175,8 +175,40 @@ btnDevelopment.addEventListener('click', ()=>{
   })
   
 
+//Scrolls
+
+const btnHome = document.querySelector('#home-menu')
+const btnAbout = document.querySelector('#about-menu')
+const btnServices = document.querySelector('#services-menu')
+const btnTeam = document.querySelector('#team-menu')
+const btnPortfolio = document.querySelector('#portfolio-menu')
+const btnContact = document.querySelector('#contact-menu')
+
+btnHome.addEventListener('click', () =>{
+    document.documentElement.scrollIntoView(true)
+})
+
+btnAbout.addEventListener('click', () =>{
+    window.scroll(0,500)
+})
+
+btnServices.addEventListener('click', () =>{
+    window.scroll(0,1100)
+})
+
+btnTeam.addEventListener('click', () =>{
+    window.scroll(0,2050)
+})
+
+btnPortfolio.addEventListener('click', () =>{
+    window.scroll(0,3200)
+})
+
+btnContact.addEventListener('click', () =>{
+    window.scroll(0,4500)
+})
+
+console.log(window.scrollY)
 
 
 
-
-console.log(divsGaleria)
