@@ -10,21 +10,16 @@ const notesContainer = document.querySelector('#notes-container')
 newNoteInput.addEventListener('keypress', (e) => {
 
     if(e.key == 'Enter'){
-        createNote(newNoteInput.value)
-    newNoteInput.value = ''}
-
-})
+    createNote(newNoteInput.value)
+    newNoteInput.value = ''} 
+    
+}
+    
+)
 
 addNoteBtn.addEventListener('click', (e) => {
 
     createNote(newNoteInput.value)
-    
-    //localStorage
-
-    let count = (localStorage.length + 1)
-
-    localStorage.setItem( `note[${count}]` ,JSON.stringify(newNoteInput.value))
-
     newNoteInput.value = ''
 })
 
@@ -51,6 +46,7 @@ function createNote(noteContent){
         const noteTextArea = document.createElement('textarea')
         noteTextArea.classList.add('note-text')
         noteTextArea.classList.add('static')
+
         //noteTextArea.classList.add('text-wrap')
         noteTextArea.value = noteContent
         newNoteContent.appendChild(noteTextArea)
@@ -85,13 +81,13 @@ function createNote(noteContent){
         iconPin.classList.add('bi-pin')
         pinIcon.appendChild(iconPin)
 
+
         //Events 
 
         //Remove Note
         iconCancel.addEventListener('click', () => {
             newNote.remove()
-            localStorage.removeItem(`note[${localStorage.length}]`)
-        
+              
         })
 
         //Edit Note
@@ -103,6 +99,7 @@ function createNote(noteContent){
 
         //Fixando a nota
         pinIcon.addEventListener('click', () => {
+
             newNote.classList.toggle('fixed-pin')
             noteTextArea.classList.toggle('fixed-pin')
             newNote.classList.toggle('priority')
@@ -130,16 +127,3 @@ function createNote(noteContent){
     }
 
 }
-
-
-//localStorage
-
-
-    for( let i = 1; i < (localStorage.length +1) ; i++ ){
-
-       let noteMemory =  localStorage.getItem(`note[${i}]`)
-
-       createNote(JSON.parse(noteMemory))
-
-
-    }
