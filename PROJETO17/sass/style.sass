@@ -1,0 +1,77 @@
+@use 'note'
+
+$primary-color: #fff
+$secondary-color: #333
+$third-color: #222
+$light-color: #555
+
+@mixin inputs
+    border-radius: 5px
+    width: 300px
+    border: none
+    padding: 5px
+
+nav
+    display: flex
+    justify-content: space-evenly
+    background: $third-color
+    color: $primary-color
+    border-bottom: 1px solid $primary-color
+    div
+        margin: 1em 0
+        .navbrand
+            font-weight: bolder
+            font-size: 1.5em
+
+        #isearch
+            @include inputs
+            margin-left: 5px
+            background-color: $light-color
+
+            &:focus
+                outline: none
+
+    button
+        background-color: $third-color
+        color: $primary-color
+        border: solid $primary-color
+
+        &:hover
+            background-color: $primary-color
+            color: $third-color
+
+body
+    background-color: $third-color
+
+#add-note-container
+    text-align: center
+    margin: 1em
+    .add-note-input
+        @include inputs
+        border: 1px solid $light-color
+        background-color: $third-color
+        color: $primary-color
+
+    .add-note-btn
+        background-color: $secondary-color
+        color: $primary-color
+        border-radius: 5px
+        &:hover
+            border: 2px solid $primary-color
+
+@media (max-width: 600px)
+    nav
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+    .search-container
+        gap: 10px
+        display: flex
+        flex-direction: row-reverse
+
+    #add-note-container
+        margin: 1em
+
+    .add-note-input
+        width: 180px

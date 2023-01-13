@@ -1,0 +1,77 @@
+$primary-color: #fff
+$secondary-color: #333
+$third-color: #222
+$light-color: #555
+
+#notes-container
+    margin: 1em 3em
+    display: flex
+    flex-wrap: wrap
+
+.note
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 220px
+    height: 200px
+    border: 2px solid $light-color
+    color: $primary-color
+    border-radius: 5px
+    background-color: $third-color
+    margin: 1em 1em
+    padding: .8em
+    &:hover
+        border: 2px solid $primary-color
+
+.note-content
+    display: flex
+    justify-content: space-between
+    gap: 30px
+
+.note-mini-icons
+    color: $light-color
+    display: flex
+    flex-direction: column
+    cursor: pointer
+    .bi-x:hover
+        color: $primary-color
+    .bi-pencil-square:hover
+        color: $primary-color
+
+.fixed-icon
+    color: $primary-color
+    background-color: $third-color
+    padding: 5px
+    width: 25px
+    cursor: pointer
+    &:hover
+        background-color: $light-color
+
+.fixed-pin
+    background-color: $light-color
+    border: 2px solid $primary-color
+
+.note-text
+    background-color: transparent
+    border: none
+    color: $primary-color
+    width: 100%
+    height: 140px
+    resize: none
+    &:focus
+        outline: none
+
+.static
+    pointer-events: none
+
+.priority
+    order: -1
+
+.hidden
+    display: none
+
+@media (max-width: 600px)
+    #notes-container
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
