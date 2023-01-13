@@ -18,7 +18,13 @@ newNoteInput.addEventListener('keypress', (e) => {
 addNoteBtn.addEventListener('click', (e) => {
 
     createNote(newNoteInput.value)
-    localStorageNotes(newNoteInput.value)
+    
+    //localStorage
+
+    let count = (localStorage.length + 1)
+
+    localStorage.setItem( `note[${count}]` ,JSON.stringify(newNoteInput.value))
+
     newNoteInput.value = ''
 })
 
@@ -84,7 +90,7 @@ function createNote(noteContent){
         //Remove Note
         iconCancel.addEventListener('click', () => {
             newNote.remove()
-            localStorage.removeItem(`note:${noteContent}`)
+            localStorage.removeItem(`note[${localStorage.length}]`)
         
         })
 
@@ -125,20 +131,15 @@ function createNote(noteContent){
 
 }
 
+
 //localStorage
-function localStorageNotes(noteContent){
-
-    localStorage.setItem( `note:${noteContent}` ,JSON.stringify(noteContent))
-
-}
-
-    const count = localStorage.length
-    console.log(count)
-
-    for( let i = 0; i <= count ; i++ ){
 
 
+    for( let i = 1; i < (localStorage.length +1) ; i++ ){
 
-        localStorage.getItem('')
+       let noteMemory =  localStorage.getItem(`note[${i}]`)
+
+       createNote(JSON.parse(noteMemory))
+
 
     }
