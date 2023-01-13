@@ -9,7 +9,7 @@ const notesContainer = document.querySelector('#notes-container')
 //Events
 newNoteInput.addEventListener('keypress', (e) => {
 
-    if(e.key == 'Enter'){
+    if(e.key == 'Enter' && newNoteInput.value != ''){
     createNote(newNoteInput.value)
     newNoteInput.value = ''} 
     
@@ -26,6 +26,14 @@ addNoteBtn.addEventListener('click', (e) => {
 
 //Create notes function -> main function <- 
 function createNote(noteContent){
+
+    const objNote = {id: geraId(),
+        content: noteContent,
+        fixed:false
+
+    }
+
+    console.log(objNote)
 
     if (noteContent == '') {
         alert('ERR0 - Digite algo na nota')
@@ -82,6 +90,12 @@ function createNote(noteContent){
         pinIcon.appendChild(iconPin)
 
 
+
+        //LocalStorage
+
+        localStorage.setItem('notes', JSON.stringify(objNote))
+
+
         //Events 
 
         //Remove Note
@@ -127,3 +141,12 @@ function createNote(noteContent){
     }
 
 }
+
+
+
+function geraId(){
+
+   return Math.floor(Math.random() * 5000 )
+}
+
+
