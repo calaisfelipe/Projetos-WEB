@@ -9,31 +9,39 @@ const notesContainer = document.querySelector('#notes-container')
 //Events
 newNoteInput.addEventListener('keypress', (e) => {
 
-    if(e.key == 'Enter' && newNoteInput.value != ''){
-    createNote(newNoteInput.value)
-    newNoteInput.value = ''} 
-    
+    if (e.key == 'Enter' && newNoteInput.value != '') {
+        localStoragedata(newNoteInput.value)
+        newNoteInput.value = ''
+    }
+
 }
-    
+
 )
 
 addNoteBtn.addEventListener('click', (e) => {
 
-    createNote(newNoteInput.value)
+    localStoragedata(newNoteInput.value)
     newNoteInput.value = ''
 })
 
+function localStoragedata(noteContent) {
 
-//Create notes function -> main function <- 
-function createNote(noteContent){
-
-    const objNote = {id: geraId(),
+    const objNote = {
+        id: geraId(),
         content: noteContent,
-        fixed:false
+        fixed: false
 
     }
 
-    console.log(objNote)
+    createNote(noteContent, objNote.id, objNote.fixed)
+
+    //LocalStorage
+
+    localStorage.setItem('notes', JSON.stringify(arr))
+}
+
+//Create notes function -> main function <- 
+function createNote(noteContent, id, fixed) {
 
     if (noteContent == '') {
         alert('ERR0 - Digite algo na nota')
@@ -43,7 +51,6 @@ function createNote(noteContent){
         const newNote = document.createElement('div')
         newNote.classList.add('note')
         notesContainer.appendChild(newNote)
-
 
         //div - note-content
         const newNoteContent = document.createElement('div')
@@ -90,18 +97,24 @@ function createNote(noteContent){
         pinIcon.appendChild(iconPin)
 
 
-
-        //LocalStorage
-
-        localStorage.setItem('notes', JSON.stringify(objNote))
-
+        if (fixed) {
+            newNote.classList.add('fixed-pin')
+            noteTextArea.classList.add('fixed-pin')
+            newNote.classList.add('priority')
+        }
 
         //Events 
 
         //Remove Note
         iconCancel.addEventListener('click', () => {
             newNote.remove()
-              
+
+            let indice = arr.findIndex((obj) => obj.id == id)
+
+            arr.splice(indice, 1)
+
+            localStorage.setItem('notes', JSON.stringify(arr))
+
         })
 
         //Edit Note
@@ -118,8 +131,20 @@ function createNote(noteContent){
             noteTextArea.classList.toggle('fixed-pin')
             newNote.classList.toggle('priority')
 
-        })
+            let indice = arr.findIndex((obj) => obj.id == id)
 
+            if (newNote.classList.contains('fixed-pin') && noteTextArea.classList.contains('fixed-pin') &&
+                newNote.classList.contains('priority')) {
+
+                arr[indice].fixed = true
+
+                localStorage.setItem('notes', JSON.stringify(arr))
+            } else {
+                arr[indice].fixed = false
+                localStorage.setItem('notes', JSON.stringify(arr))
+            }
+
+        })
 
         //Pesquisa
         searchBar.addEventListener('input', () => {
@@ -136,17 +161,29 @@ function createNote(noteContent){
 
         })
 
-        
-
     }
 
 }
 
 
+function geraId() {
 
-function geraId(){
-
-   return Math.floor(Math.random() * 5000 )
+    return Math.floor(Math.random() * 5000)
 }
 
+
+//program initial
+
+var arr = []
+
+const notesInMemory = localStorage.getItem('notes')
+const allNotes = (JSON.parse(notesInMemory))
+console.log(allNotes)
+
+allNotes.forEach((el) => {
+    createNote(el.content, el.id, el.fixed)
+    arr.push(el)
+
+
+});
 
