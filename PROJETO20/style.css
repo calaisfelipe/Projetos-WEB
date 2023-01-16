@@ -1,0 +1,180 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: helvetica;
+}
+
+body{
+    background-color: #111;
+    position: relative;
+    overflow: hidden;
+   
+}
+
+/*Header*/
+
+a{
+    text-decoration: none;
+}
+
+#header-container{
+    
+    display: flex;
+    justify-content: space-between;
+    margin: 3em 5em;
+    
+}
+
+#img-logo{
+    width: 80px;
+}
+
+#navbar{
+    
+    display: flex;
+    gap: 2em;
+}
+
+#navbar > a{
+    color: #fff;
+    transition: .5s ease;
+}
+
+#navbar > a:hover{
+    color: red;
+    transform: scale(1.2);
+
+}
+
+
+/*MAIN*/
+
+#title-container{
+    margin: 5em 3em 1em 3em;
+}
+
+h2{
+    color: #fff;
+    font-size:2em;
+}
+
+h1{ color: red;
+    font-size: 5em;
+
+}
+
+#description-container{
+    margin: 1em 3em;
+    width: 500px;
+}
+
+#description-paragraf{
+    color: #fff;
+}
+
+#btn-products{
+    margin: 1em 3em;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: red;
+    cursor: pointer;
+    transition: .5s ease;
+
+}
+
+#btn-products:hover{
+    background-color: #555;
+    transform: translateY(-12px);
+    
+}
+
+
+/*Footer*/
+
+#footer-container{
+    margin: 1em 3em;
+   
+}
+
+#social-media-container{
+    margin-top: 8em;
+    display: flex;
+    gap: 40px;
+}
+
+.social-media{
+    color: #fff;
+    background-color: #333;
+    padding: 6px;
+    border-radius: 50%;
+    font-size: 1.3em;
+    transition: .5s ease;
+
+}
+
+.social-media:hover{
+    background-color: red;
+    transform: scale(1.2) translateY(-12px)
+}
+
+#red-circle{
+    /*width: 900px;
+    height: 700px;
+    background-color: red;
+    position: absolute;
+    border-radius: 50%;
+    top:15%;
+    left:55%;
+    z-index: -10;*/
+
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+    position: absolute;
+    clip-path: circle(50% at bottom right);
+    top:0;
+    left:0;
+    z-index: -10;
+
+}
+
+#img-container{
+    position: absolute;
+    top: 35%;
+    left:60%;
+    
+}
+
+#coke-1, #coke-4{
+    transform: rotate(-20deg);
+}
+
+#coke-1{
+    max-width: 250px;
+    height: 400px;
+    z-index: -9;
+}
+
+#coke-2{
+    transform: rotate(10deg);
+    max-width: 250px;
+    height: 250px;
+    z-index: -8;
+}
+
+#coke-3{
+    transform: rotate(20deg);
+    max-width: 250px;
+    height: 250px;
+    z-index: -7;
+}
+
+#coke-4{
+    max-width: 250px;
+    height: 350px;
+    z-index: -6;
+}
