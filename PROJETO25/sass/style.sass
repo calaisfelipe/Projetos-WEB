@@ -17,10 +17,23 @@ body
     justify-content: center
     align-items: center
     gap: 1em
-    background-image: linear-gradient(125deg ,#215D53, $color1, #fff)
+    //background-image: linear-gradient(125deg ,#215D53, $color1, #fff)
+    background: linear-gradient(-45deg, #215D53 , #227F75, #3edaca ) no-repeat
+    background-size: 300% 300%
     height: 100vh
     overflow: hidden
-
+    animation: backgroudAnimation 10s ease infinite
+    
+@keyframes backgroudAnimation 
+    0%
+        background-position: 0 50%
+    
+    50%
+        background-position: 100% 50%
+    
+    100%
+        background-position: 0 50%
+    
     
 .container
     margin-top: 3em
@@ -117,5 +130,6 @@ footer
 @media (max-width:400px)
     .container
         margin-top: 1em
+        height: 600px
 
   
