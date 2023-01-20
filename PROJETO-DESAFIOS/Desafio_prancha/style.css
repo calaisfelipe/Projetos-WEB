@@ -1,0 +1,68 @@
+
+:root{
+--color01:#402F2F;
+--color02:#BF9C99;
+--color03:#F2C8C4;
+--restcolor:#A65D5D;
+--other:#733F3F;
+
+}
+
+body{
+    overflow: hidden;
+    background-color: var(--color02);
+
+}
+
+h3, p{
+    display: inline-block;
+    
+}
+
+h3{
+    font-size: 1.3em;
+    
+}
+
+p{
+    margin-left: 10px;
+}
+
+
+
+header{
+    text-align: center;
+    margin: 1.5em 0;
+    color: #fff;
+    text-shadow: 2px 2px 2px black;
+}
+
+
+.day-item{
+    margin-top: 2px;
+    background-color: var(--color03);
+    text-align: center;
+    padding: 5px 10px;
+    width: 240px;
+    height: 40px;
+    transition: all .25s ease-in-out;
+    cursor: pointer;
+}
+
+.day-item:hover{
+    transform: translateY(-10px) rotate(2deg) scale(1.1);
+}
+
+.day-item:hover ~ .day-item{
+    transform: translateY(10px);
+}
+
+.rest{
+    color: #A65D5D;
+    font-weight: bold;
+}
+
+.done{
+    opacity: 0.3;
+    
+}
