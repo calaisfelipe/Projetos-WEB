@@ -66,3 +66,9 @@ header{
     opacity: 0.3;
     
 }
+
+div.done .day:nth-child(1),
+div.done .day:nth-child(2){
+    text-decoration: line-through;
+
+}
