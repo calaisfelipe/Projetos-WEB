@@ -73,6 +73,7 @@ h1{ color: red;
 
 #description-paragraf{
     color: #fff;
+    z-index: 20;
 }
 
 #btn-products{
@@ -177,4 +178,74 @@ h1{ color: red;
     max-width: 250px;
     height: 350px;
     z-index: -6;
+}
+
+
+/*md*/
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    #coke-3{
+        display: none;
+    }
+    
+    #coke-4{
+        display: none;
+    }
+}
+
+
+
+/*sm*/
+@media screen and (min-width: 480px) and (max-width: 768px){
+
+    #red-circle{
+        height: 50vh; 
+    
+    }
+
+
+    
+    #coke-2{
+        display: none;
+    }
+    
+    #coke-3{
+        display: none;
+    }
+    
+    #coke-4{
+        display: none;
+    }
+}
+
+/*xs*/
+@media screen and (min-width: 320px) and (max-width: 480px){
+
+    
+
+    #img-container{
+        position: absolute;
+        top: 55%;
+        left:65%;
+        
+    }
+
+#coke-1{
+    transform: rotate(20deg);
+    height: 300px;
+    
+}
+
+
+    #coke-2{
+        display: none;
+    }
+    
+    #coke-3{
+        display: none;
+    }
+    
+    #coke-4{
+        display: none;
+    }
+
 }
